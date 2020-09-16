@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class bj_10828 {
+public class bj_10828_Ω∫≈√ {
 
 	 static public void main(String[] args){
 	     Scanner sc = new Scanner(System.in);
