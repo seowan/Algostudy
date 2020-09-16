@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_2609 {
+public class bj_2609_최대공약수와최소공배수 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
