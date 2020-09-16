@@ -2,7 +2,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class bj_10866 {
+public class bj_10866_µ¦ {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
