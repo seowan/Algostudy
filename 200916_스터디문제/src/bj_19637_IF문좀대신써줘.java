@@ -29,5 +29,4 @@ public class bj_19637_IF문좀대신써줘 {
 			}
 		}
 	}
-
 }
