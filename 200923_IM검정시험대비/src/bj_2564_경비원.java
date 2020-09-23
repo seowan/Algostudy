@@ -22,14 +22,14 @@ public class bj_2564_경비원 {
 		
 		int C = Integer.parseInt(st.nextToken()); //가로길이
 		int R = Integer.parseInt(st.nextToken()); //세로길이
-		int store = Integer.parseInt(br.readLine());
+		int store = Integer.parseInt(br.readLine()); //상점갯수
 		ArrayList<sp> arr = new ArrayList<sp>();
 		
 		for (int i = 0; i <= store; i++) {
 			st = new StringTokenizer(br.readLine());
-			int dir = Integer.parseInt(st.nextToken());
-			int point = Integer.parseInt(st.nextToken());
-			switch (dir) {
+			int dir = Integer.parseInt(st.nextToken()); //방향
+			int point = Integer.parseInt(st.nextToken()); //거리
+			switch (dir) {//방향에따라 좌표를 계산하여 배열에 저장
 			case 1:
 				arr.add(new sp(0, point,dir));
 				break;
@@ -43,15 +43,15 @@ public class bj_2564_경비원 {
 				arr.add(new sp(point, C,dir));
 				break;
 			}
-		}//상점 입력 끝
+		}//상점 & 동근위치 입력 끝
 		
-		int answer=0;
+		int answer=0; //총 거리
 		int xx = arr.get(store).x;
 		int yy = arr.get(store).y;
 		int dir = arr.get(store).dir;
-		int dista,distb;
+		int dista,distb; //비교할 두 거리 저장
 		for (int i = 0; i < store; i++) {
-			if ((dir==1&&arr.get(i).dir==2) || 
+			if ((dir==1&&arr.get(i).dir==2) ||  //남쪽과 북쪽
 					(dir==2&&arr.get(i).dir==1)) {
 				dista = arr.get(i).y+yy+R;
 				distb = C-arr.get(i).y+C-yy+R;
@@ -62,7 +62,7 @@ public class bj_2564_경비원 {
 				dista = arr.get(i).x+xx+C;
 				distb = R-arr.get(i).x+R-xx+C;
 				answer+=Math.min(dista, distb);
-			}else {
+			}else { //서로 마주보는 방향이 아닐경우
 				answer+=Math.abs(xx-arr.get(i).x) + Math.abs(yy-arr.get(i).y);
 			}
 		}
