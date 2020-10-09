@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class bj_15655_n°úm_6 {
+public class bj_15655_nê³¼m_6 {
 	static int N, M, answer[], number[];
 
 	public static void main(String[] args) {

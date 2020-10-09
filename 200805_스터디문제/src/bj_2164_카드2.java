@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class bj_2164_카드2 {
+public class bj_2164_移대뱶2 {
 
 	public static Queue<Integer> queue = new LinkedList<>();
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class bj_2164_카드2 {
 		
 		for (int i = 1; i <= num; i++) {
 			queue.add(i);
-		}//숫자카드 넣기
+		}//카 殮
 		
 		for (int i = 1; i <= num; i++) {
 			if (queue.size()==1) {

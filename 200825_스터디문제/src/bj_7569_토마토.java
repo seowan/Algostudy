@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class bj_7569_Åä¸¶Åä {
+public class bj_7569_í† ë§ˆí†  {
 	static int dir[][] = { { -1, 0, 0 }, { 0, 1, 0 }, { 1, 0, 0 }, { 0, -1, 0 }, { 0, 0, -1 }, { 0, 0, 1 } };
 	static int map[][][], result[][][];
 
@@ -38,7 +38,7 @@ public class bj_7569_Åä¸¶Åä {
 					}
 				}
 			}
-		} // ÀÔ·Â³¡
+		} // Ô·Â³
 		while (!queue.isEmpty()) {
 			Point p = queue.poll();
 			int x = p.x;

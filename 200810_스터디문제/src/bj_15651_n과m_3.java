@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class bj_15651_n°úm_3 {
+public class bj_15651_nê³¼m_3 {
 	static int n, m;
 	static int[] arr1 = new int[8];
 	static int[] arr2 = new int[8];

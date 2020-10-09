@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class bj_1260_DFS¿ÍBFS {
+public class bj_1260_DFSì™€BFS {
 	static int map[][];
 	static boolean visited[];
 	static boolean visited2[];
@@ -24,7 +24,7 @@ public class bj_1260_DFS¿ÍBFS {
 			int y = sc.nextInt();
 			map[x][y] = map[y][x] = 1;
 			temp--;
-		} // °£¼± Á¤º¸ ÀÔ·Â¿Ï·á
+		} //   Ô·Â¿Ï·
 
 		dfs(V);
 

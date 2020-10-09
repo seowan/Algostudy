@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_15650_n°úm_2 {
+public class bj_15650_nê³¼m_2 {
 	static int N, M, answer[];
 	static boolean selected[];
 

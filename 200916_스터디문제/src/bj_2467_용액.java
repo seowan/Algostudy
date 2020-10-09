@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class bj_2467_¿ë¾× {
+public class bj_2467_ìš©ì•¡ {
 	static int answer[] = new int[2];
 	static int list[], N, min = Integer.MAX_VALUE;
 

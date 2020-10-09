@@ -1,8 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-//dfs·Î Å½»öÇØ¼­ ±¸¿ª°¹¼öÃ£±â
-public class bj_10026_Àû·Ï»ö¾à {
+//dfsë¡œ íƒìƒ‰í•´ì„œ êµ¬ì—­ê°¯ìˆ˜ì°¾ê¸°
+public class bj_10026_ì ë¡ìƒ‰ì•½ {
 	static int N;
 	static char map[][];
 	static boolean visited[][];

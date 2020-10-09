@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class bj_1085_Á÷»ç°¢Çü¿¡¼­Å»Ãâ {
+public class bj_1085_ì§ì‚¬ê°í˜•ì—ì„œíƒˆì¶œ {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

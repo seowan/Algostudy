@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class bj_11650_ÁÂÇ¥Á¤·ÄÇÏ±â {
+public class bj_11650_ì¢Œí‘œì •ë ¬í•˜ê¸° {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class bj_11650_ÁÂÇ¥Á¤·ÄÇÏ±â {
 		for (int i = 0; i < num; i++) {
 			arr[i][0] = sc.nextInt();
 			arr[i][1] = sc.nextInt();
-		} // ÁÂÇ¥ÀÔ·Â¹ÞÀ½
+		} // ì¢Œí‘œìž…ë ¥ë°›ìŒ
 
 		Arrays.sort(arr, new Comparator<int[]>() {
 			public int compare(int[] p1, int[] p2) {

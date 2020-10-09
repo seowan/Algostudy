@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class bj_10828_½ºÅÃ {
+public class bj_10828_ìŠ¤íƒ{
 
 	 static public void main(String[] args){
 	     Scanner sc = new Scanner(System.in);

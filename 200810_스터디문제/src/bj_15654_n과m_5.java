@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class bj_15654_n°úm_5 {
+public class bj_15654_nê³¼m_5 {
 	static int N, M, answer[], number[];
 	static boolean selected[];
 

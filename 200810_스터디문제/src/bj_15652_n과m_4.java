@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_15652_n°úm_4 {
+public class bj_15652_nê³¼m_4 {
 	static int N, M, answer[];
 
 	public static void main(String[] args) {

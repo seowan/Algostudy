@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class bj_2751_¼öÁ¤·ÄÇÏ±â2 {
+public class bj_2751_ìˆ˜ì •ë ¬í•˜ê¸°2 {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

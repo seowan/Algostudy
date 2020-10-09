@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class bj_17129_Àª¸®¾Ï½¼¼ö¾×»¡ÀÌµüµû±¸¸®°¡Á¤º¸¼¶¿¡¿Ã¶ó¿ÂÀÌÀ¯ {
+public class bj_17129_ìœŒë¦¬ì•”ìŠ¨ìˆ˜ì•¡ë¹¨ì´ë”±ë”°êµ¬ë¦¬ê°€ì •ë³´ì„¬ì—ì˜¬ë¼ì˜¨ì´ìœ  {
 
 	static class point {
 		int x, y, count;

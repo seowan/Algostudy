@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_10250_acmÈ£ÅÚ {
+public class bj_10250_acmí˜¸í…” {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class bj_10250_acmÈ£ÅÚ {
 			int H = sc.nextInt();
 			int W = sc.nextInt();
 			int person = sc.nextInt();
-			// ¸ò+1ÀÌ È£¼ö ³ª¸ÓÁö°¡ Ãş¼ö
+			// ëª«+1ì´ í˜¸ìˆ˜ ë‚˜ë¨¸ì§€ê°€ ì¸µìˆ˜
 			int floor = person % H;
 			int room = (person / H) + 1;
 
