@@ -1,31 +1,31 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class bj_2635_¼öÀÌ¾î°¡±â {
+public class bj_2635_ìˆ˜ì´ì–´ê°€ê¸° {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);		
-		int num = sc.nextInt(); //Ã¹ ¼ıÀÚÀÔ·Â
-		int answer = 0; //Á¤´ä ÀúÀå º¯¼ö
+		int num = sc.nextInt(); //ì²« ìˆ«ìì…ë ¥
+		int answer = 0; //ì •ë‹µ ì €ì¥ ë³€ìˆ˜
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		
 		for (int i = num/2; i <= num; i++) {
 			ArrayList<Integer> temp = new ArrayList<Integer>();
-			temp.add(num); //Ã¹¹øÂ° ¼ıÀÚ ÀúÀå
-			temp.add(i); //µÎ¹øÂ° ¼ıÀÚ ÀúÀå
-			int count = 2; //Ã¹ Ä«¿îÆ® ÁöÁ¤
+			temp.add(num); //ì²«ë²ˆì§¸ ìˆ«ì ì €ì¥
+			temp.add(i); //ë‘ë²ˆì§¸ ìˆ«ì ì €ì¥
+			int count = 2; //ì²« ì¹´ìš´íŠ¸ ì§€ì •
 			
 			while (true) {
 				int nextnum = temp.get(count-2) - temp.get(count-1);
-				if (nextnum<0) { //´ÙÀ½ ¼ıÀÚ°¡ À½¼ö¶ó¸é
-					if (count>answer) { //±×µ¿¾È ¼¾¼ıÀÚ°¹¼ö¿Í Á¤´ä°¹¼ö¸¦ ºñ±³ÇÏ¿©
+				if (nextnum<0) { //ë‹¤ìŒ ìˆ«ìê°€ ìŒìˆ˜ë¼ë©´
+					if (count>answer) { //ê·¸ë™ì•ˆ ì„¼ìˆ«ìê°¯ìˆ˜ì™€ ì •ë‹µê°¯ìˆ˜ë¥¼ ë¹„êµí•˜ì—¬
 						answer=count; 
 						result=temp;
 					}
-					break; //À½¼öÀÏ¶§ Á¾·á
+					break; //ìŒìˆ˜ì¼ë•Œ ì¢…ë£Œ
 				}
-				temp.add(nextnum); //À½¼ö°¡ ¾Æ´Ï¶ó¸é ´ÙÀ½¼ıÀÚ¸¦ ¹è¿­¿¡ ÀúÀå
-				count++; //Ä«¿îÆ®µµ ÇÏ³ª ¿Ã·ÁÁØ´Ù
+				temp.add(nextnum); //ìŒìˆ˜ê°€ ì•„ë‹ˆë¼ë©´ ë‹¤ìŒìˆ«ìë¥¼ ë°°ì—´ì— ì €ì¥
+				count++; //ì¹´ìš´íŠ¸ë„ í•˜ë‚˜ ì˜¬ë ¤ì¤€ë‹¤
 			}
 		}
 		System.out.println(answer);

@@ -2,9 +2,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj_2477_Âü¿Ü¹ç {
+public class bj_2477_ì°¸ì™¸ë°­ {
 
-	//Å« »ç°¢Çü¿¡¼­ ºóºÎºĞÀ» »©´Â¹æ½Ä
+	//í° ì‚¬ê°í˜•ì—ì„œ ë¹ˆë¶€ë¶„ì„ ë¹¼ëŠ”ë°©ì‹
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -17,21 +17,21 @@ public class bj_2477_Âü¿Ü¹ç {
 			st = new StringTokenizer(br.readLine());
 			dir[i] = Integer.parseInt(st.nextToken());
 			length[i] = Integer.parseInt(st.nextToken());
-		} //6°¢ Á¤º¸ÀÔ·Â ³¡
+		} //6ê° ì •ë³´ì…ë ¥ ë
 		
 		int area=0,point=0;
 		for (int i = 0; i < 6; i++) {
 			if (area<length[i]*length[(i+1)%6]) {
-				area=length[i]*length[(i+1)%6]; //Á¦ÀÏÅ« »ç°¢Çü³ĞÀÌ
-				point=i; //Á¦ÀÏÅ« »ç°¢ÇüÀÇ ±âÁØÁ¡À» ÀúÀå
+				area=length[i]*length[(i+1)%6]; //ì œì¼í° ì‚¬ê°í˜•ë„“ì´
+				point=i; //ì œì¼í° ì‚¬ê°í˜•ì˜ ê¸°ì¤€ì ì„ ì €ì¥
 			}
 		}
 		
 		int subarea=0;
-		//ºó »ç°¢ÇüÀÇ ÁÂÇ¥´Â Ç×»ó Á¦ÀÏÅ« »ç°¢ÇüÀÇ Æ÷ÀÎÆ®ÀÇ +3,+4¹øÂ°¿¡³ª¿Â´Ù
-		//Âü¿Ü¹çÀº Ç×»ó 6°¢ÇüÀÌ±â ¶§¹®¿¡)
+		//ë¹ˆ ì‚¬ê°í˜•ì˜ ì¢Œí‘œëŠ” í•­ìƒ ì œì¼í° ì‚¬ê°í˜•ì˜ í¬ì¸íŠ¸ì˜ +3,+4ë²ˆì§¸ì—ë‚˜ì˜¨ë‹¤
+		//ì°¸ì™¸ë°­ì€ í•­ìƒ 6ê°í˜•ì´ê¸° ë•Œë¬¸ì—)
 		subarea=length[(point+3)%6]*length[(point+4)%6];
-		//Âü¿Ü°¡ ÀÚ¶ö¼öÀÖ´Â ÃÖÁ¾ ¹çÀÇ Å©±â°è»ê
+		//ì°¸ì™¸ê°€ ìë„ìˆ˜ìˆëŠ” ìµœì¢… ë°­ì˜ í¬ê¸°ê³„ì‚°
 		area = area-subarea;
 		
 		System.out.println(area*num);		

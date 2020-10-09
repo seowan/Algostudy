@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_10157_ÀÚ¸®¹èÁ¤ {
+public class bj_10157_ìë¦¬ë°°ì • {
 	static int dir[][] = {{0,1},{1,0},{0,-1},{-1,0}};
 
 	public static void main(String[] args) {
@@ -11,11 +11,11 @@ public class bj_10157_ÀÚ¸®¹èÁ¤ {
 		int K = sc.nextInt();
 		
 		
-		if (K>C*R) System.out.println(0); //¹øÈ£Ç¥¸¦ ÁÙ¼ö¾ø´Â°æ¿ì
+		if (K>C*R) System.out.println(0); //ë²ˆí˜¸í‘œë¥¼ ì¤„ìˆ˜ì—†ëŠ”ê²½ìš°
 		else {
 			int [][] map = new int[R+1][C+1];
 			int d = 0;
-			int r=1,c=1; //1,1ºÎÅÍ ½ÃÀÛ
+			int r=1,c=1; //1,1ë¶€í„° ì‹œì‘
 			
 			for (int i = 1; i <= K; i++) {
 				map[r][c]=i;
@@ -27,7 +27,7 @@ public class bj_10157_ÀÚ¸®¹èÁ¤ {
 				if (0<tr && 0<tc && tr<=R && tc<=C && map[tr][tc]==0) {
 					r=tr;
 					c=tc;
-				}else { //¹æÇâÀüÈ¯
+				}else { //ë°©í–¥ì „í™˜
 					d=(d+1)%4;
 					r+=dir[d][0];
 					c+=dir[d][1];

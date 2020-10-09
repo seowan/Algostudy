@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj_2578_ºù°í {
+public class bj_2578_ë¹™ê³  {
 	public static int map[][] = new int[5][5];
 
 	public static void main(String[] args) throws Exception {
@@ -14,35 +14,35 @@ public class bj_2578_ºù°í {
 			for (int j = 0; j < 5; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
 			}
-		} // ºù°íÆÇ ÀÔ·Â¿Ï·á
+		} // ë¹™ê³ íŒ ì…ë ¥ì™„ë£Œ
 
-		int num, count = 0;//count:»çÈ¸ÀÚ°¡ ºÎ¸¥ ¼ıÀÚ°³¼ö
+		int num, count = 0;//count:ì‚¬íšŒìê°€ ë¶€ë¥¸ ìˆ«ìê°œìˆ˜
 		for (int i = 0; i < 5; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < 5; j++) {
 				count++;
 				num = Integer.parseInt(st.nextToken());
-				if (linesearch(num) >= 3) { //ºù°í¶óÀÎ¼ö°¡ 3°³ÀÌ»óÀÌ¸é
-					System.out.println(count); //°¹¼öÃâ·Â
-					return; //Á¾·á
+				if (linesearch(num) >= 3) { //ë¹™ê³ ë¼ì¸ìˆ˜ê°€ 3ê°œì´ìƒì´ë©´
+					System.out.println(count); //ê°¯ìˆ˜ì¶œë ¥
+					return; //ì¢…ë£Œ
 				}
 			}
 		}
 	}
 
-	private static int linesearch(int num) {//¶óÀÎ°¹¼ö Å½»ö
+	private static int linesearch(int num) {//ë¼ì¸ê°¯ìˆ˜ íƒìƒ‰
 		int line = 0;
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				if (map[i][j] == num) {
-					map[i][j] = 0; //¹æ±İºÎ¸¥¼ıÀÚ¸¦ Ã³¸®
+					map[i][j] = 0; //ë°©ê¸ˆë¶€ë¥¸ìˆ«ìë¥¼ ì²˜ë¦¬
 					j = 5;
 					i = 5;
 				}
 			}
 		}
 
-		// °¡·ÎÅ½»ö
+		// ê°€ë¡œíƒìƒ‰
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				if (map[i][j] > 0) {
@@ -55,7 +55,7 @@ public class bj_2578_ºù°í {
 
 		}
 
-		// ¼¼·ÎÅ½»ö
+		// ì„¸ë¡œíƒìƒ‰
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				if (map[j][i] > 0) {
@@ -68,7 +68,7 @@ public class bj_2578_ºù°í {
 
 		}
 
-		// ´ë°¢¼± Å½»ö
+		// ëŒ€ê°ì„  íƒìƒ‰
 		for (int i = 0; i < 5; i++) {
 			if (map[i][i] > 0) {
 				break;
@@ -86,7 +86,7 @@ public class bj_2578_ºù°í {
 				line++;
 			}
 		}
-		return line; //ÃÑ ºù°í¶óÀÎ¼ö¸¦ ¸®ÅÏ
+		return line; //ì´ ë¹™ê³ ë¼ì¸ìˆ˜ë¥¼ ë¦¬í„´
 	}
 
 }

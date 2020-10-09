@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bj_2527_Á÷»ç°¢Çü {
+public class bj_2527_ì§ì‚¬ê°í˜• {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -14,20 +14,20 @@ public class bj_2527_Á÷»ç°¢Çü {
 			int y2 = sc.nextInt();
 			int p2 = sc.nextInt();
 			int q2 = sc.nextInt();
-			//ÁÂÇ¥ÀÔ·Â ³¡
+			//ì¢Œí‘œì…ë ¥ ë
 			
 			if ((x>p2 || x2>p) || (y>q2 || y2>q)) {
-				//µÎ »ç°¢ÇüÀÌ ¶³¾îÁ®ÀÖ´Â°æ¿ì
+				//ë‘ ì‚¬ê°í˜•ì´ ë–¨ì–´ì ¸ìˆëŠ”ê²½ìš°
 				System.out.println("d");
 			}
 			else if ((x==p2 || x2==p) && (y==q2 || y2==q)) {
-				//ÇÏ³ªÀÇÁ¡¿¡¼­ ¸¸³µÀ»¶§
+				//í•˜ë‚˜ì˜ì ì—ì„œ ë§Œë‚¬ì„ë•Œ
 				System.out.println("c");
 			}
 			else if ((x==p2 || x2==p) || (y==q2 || y2==q)) {
-				//¼±ºĞÀÌ ÀÏÄ¡ÇÒ¶§
+				//ì„ ë¶„ì´ ì¼ì¹˜í• ë•Œ
 				System.out.println("b");
-			}else System.out.println("a"); //»ç°¢ÇüÀÌ °ãÃÄÁö´Â °æ¿ì
+			}else System.out.println("a"); //ì‚¬ê°í˜•ì´ ê²¹ì³ì§€ëŠ” ê²½ìš°
 		}
 		sc.close();
 	}

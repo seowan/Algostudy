@@ -2,33 +2,33 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj_2563_»öÁ¾ÀÌ {
+public class bj_2563_ìƒ‰ì¢…ì´ {
 
-	public static int board[][] = new int[100][100]; // µµÈ­ÁöÅ©±â
+	public static int board[][] = new int[100][100]; // ë„í™”ì§€í¬ê¸°
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		int paper = Integer.parseInt(br.readLine());
 
-		for (int i = 0; i < paper; i++) { // »öÁ¾ÀÌ ºÙÀÌ±â ½ÃÀÛ
+		for (int i = 0; i < paper; i++) { // ìƒ‰ì¢…ì´ ë¶™ì´ê¸° ì‹œì‘
 			st = new StringTokenizer(br.readLine());
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
-			for (int a = x; a < x + 10; a++) { // ÀÔ·Â¹ŞÀº ÁöÁ¡À¸·ÎºÎÅÍ »öÁ¾ÀÌÅ©±â¸¸Å­
+			for (int a = x; a < x + 10; a++) { // ì…ë ¥ë°›ì€ ì§€ì ìœ¼ë¡œë¶€í„° ìƒ‰ì¢…ì´í¬ê¸°ë§Œí¼
 				for (int b = y; b < y + 10; b++) {
-					if (board[b][a] == 0) { // »öÁ¾ÀÌ°¡ ºÙ¾îÀÖÁö¾Ê´Ù¸é
-						board[b][a] = 1; // »öÁ¾ÀÌ ºÙÀÌ±â
+					if (board[b][a] == 0) { // ìƒ‰ì¢…ì´ê°€ ë¶™ì–´ìˆì§€ì•Šë‹¤ë©´
+						board[b][a] = 1; // ìƒ‰ì¢…ì´ ë¶™ì´ê¸°
 					}
 				}
 			}
-		} // »öÁ¾ÀÌ¸¦ ÀüºÎ´Ù ºÙÀÓ
+		} // ìƒ‰ì¢…ì´ë¥¼ ì „ë¶€ë‹¤ ë¶™ì„
 
-		int count = 0; // »öÁ¾ÀÌ ºÙÀÎ¿µ¿ª °¹¼ö¼¼±â
+		int count = 0; // ìƒ‰ì¢…ì´ ë¶™ì¸ì˜ì—­ ê°¯ìˆ˜ì„¸ê¸°
 		for (int i = 0; i < 100; i++) {
 			for (int j = 0; j < 100; j++) {
 				if (board[i][j] == 1) {
-					count++; // »öÁ¾ÀÌ°¡ ºÙ¾îÀÖ´Ù¸é ¿µ¿ªÄ«¿îÆ®
+					count++; // ìƒ‰ì¢…ì´ê°€ ë¶™ì–´ìˆë‹¤ë©´ ì˜ì—­ì¹´ìš´íŠ¸
 				}
 			}
 		}

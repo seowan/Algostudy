@@ -1,30 +1,30 @@
 import java.util.Scanner;
 
-public class bj_2669_Á÷»ç°¢Çü³×°³ÀÇÇÕÁıÇÕÀÇ¸éÀû±¸ÇÏ±â {
+public class bj_2669_ì§ì‚¬ê°í˜•ë„¤ê°œì˜í•©ì§‘í•©ì˜ë©´ì êµ¬í•˜ê¸° {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		//ÀÔ·ÂÀÌ 1ºÎÅÍ 100±îÁö ÀÌ¹Ç·Î ¹è¿­Å©±â¸¦ 101,101·Î ÁöÁ¤
+		//ì…ë ¥ì´ 1ë¶€í„° 100ê¹Œì§€ ì´ë¯€ë¡œ ë°°ì—´í¬ê¸°ë¥¼ 101,101ë¡œ ì§€ì •
 		boolean map[][] = new boolean[101][101];
 		
-		//Á÷»ç°¢Çü 4°³ÀÔ·Â
+		//ì§ì‚¬ê°í˜• 4ê°œì…ë ¥
 		for (int rec = 0; rec < 4; rec++) {
 			int x1 = sc.nextInt();
 			int y1 = sc.nextInt();
 			int x2 = sc.nextInt();
 			int y2 = sc.nextInt();
 			
-			//Á÷»ç°¢ÇüÀÇ ¹üÀ§¸¦ true·Î ¹Ù²ãÁØ´Ù
+			//ì§ì‚¬ê°í˜•ì˜ ë²”ìœ„ë¥¼ trueë¡œ ë°”ê¿”ì¤€ë‹¤
 			for (int i = x1; i < x2; i++) {
 				for (int j = y1; j < y2; j++) {
 					map[i][j] = true;
 				}
 			}
 		}
-		//Á÷»ç°¢ÇüÀÌ ÀÖ´Â ¹üÀ§°¹¼ö Ä«¿îÆÃº¯¼ö¼±¾ğ
+		//ì§ì‚¬ê°í˜•ì´ ìˆëŠ” ë²”ìœ„ê°¯ìˆ˜ ì¹´ìš´íŒ…ë³€ìˆ˜ì„ ì–¸
 		int count=0;		
-		//ÀüÃ¼¸¦ Å½»öÇÏ¿© mapÀÇ °ªÀÌ trueÀÌ¸é Ä«¿îÆ®Ãß°¡
+		//ì „ì²´ë¥¼ íƒìƒ‰í•˜ì—¬ mapì˜ ê°’ì´ trueì´ë©´ ì¹´ìš´íŠ¸ì¶”ê°€
 		for (int i = 1; i < 101; i++) {
 			for (int j = 1; j < 101; j++) {
 				if (map[i][j]) {

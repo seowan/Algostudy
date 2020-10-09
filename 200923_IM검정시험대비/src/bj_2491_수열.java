@@ -2,32 +2,32 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj_2491_¼ö¿­ {
+public class bj_2491_ìˆ˜ì—´ {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int length = Integer.parseInt(br.readLine()); //ÃÑ ¼ıÀÚ°³¼ö
-		int[] map =  new int[length]; //¼ıÀÚ ÀúÀåÇÒ ¹è¿­
+		int length = Integer.parseInt(br.readLine()); //ì´ ìˆ«ìê°œìˆ˜
+		int[] map =  new int[length]; //ìˆ«ì ì €ì¥í•  ë°°ì—´
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		for (int i = 0; i < length; i++) {
 			map[i] = Integer.parseInt(st.nextToken());
-		} //¼ö¿­ ÀÔ·Â
+		} //ìˆ˜ì—´ ì…ë ¥
 		
-		int answer = 1; //¿¬¼ÓµÇ´Â°ÍÀÌ ¾øÀ¸¸é 1¹İÈ¯
-		int count=1; //Ã¹¹øÂ°¼ıÀÚºÎÅÍ Ä«¿îÆÃ
+		int answer = 1; //ì—°ì†ë˜ëŠ”ê²ƒì´ ì—†ìœ¼ë©´ 1ë°˜í™˜
+		int count=1; //ì²«ë²ˆì§¸ìˆ«ìë¶€í„° ì¹´ìš´íŒ…
 		for (int i = 0; i < length-1; i++) {
 			if (map[i]<=map[i+1]) count++;
 			else count=1;
 			if (count>answer) answer=count;
-		} //°è¼Ó Ä¿Áö´Â °æ¿ì
+		} //ê³„ì† ì»¤ì§€ëŠ” ê²½ìš°
 		
 		count=1;
 		for (int i = 0; i < length-1; i++) {
 			if (map[i]>=map[i+1]) count++;
 			else count=1;
 			if (count>answer) answer=count;
-		} //°è¼Ó ÀÛ¾ÆÁö´Â °æ¿ì
+		} //ê³„ì† ì‘ì•„ì§€ëŠ” ê²½ìš°
 		
 		System.out.println(answer);
 	}

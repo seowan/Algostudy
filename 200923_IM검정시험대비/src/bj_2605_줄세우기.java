@@ -2,17 +2,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class bj_2605_ÁÙ¼¼¿ì±â {
+public class bj_2605_ì¤„ì„¸ìš°ê¸° {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int num = Integer.parseInt(br.readLine()); //ÇĞ»ı¼ö
-		ArrayList<Integer> person = new ArrayList<Integer>();//ÃÖÁ¾ ÁÙÀúÀå
+		int num = Integer.parseInt(br.readLine()); //í•™ìƒìˆ˜
+		ArrayList<Integer> person = new ArrayList<Integer>();//ìµœì¢… ì¤„ì €ì¥
 		
-		String temp[] = br.readLine().split(" "); //ÇĞ»ıÀÌ»ÌÀº¼ö ¹è¿­¿¡ÀúÀå
+		String temp[] = br.readLine().split(" "); //í•™ìƒì´ë½‘ì€ìˆ˜ ë°°ì—´ì—ì €ì¥
 		for (int i = 1; i <= num; i++) {
-			//¸ÇµÚ(¹è¿­Å©±â)¿¡¼­ »ÌÀº ¼ö¸¸Å­ ¾ÕÀ¸·Î¿Í¼­ ÁÙ¼­±â
+			//ë§¨ë’¤(ë°°ì—´í¬ê¸°)ì—ì„œ ë½‘ì€ ìˆ˜ë§Œí¼ ì•ìœ¼ë¡œì™€ì„œ ì¤„ì„œê¸°
 			person.add(person.size()-Integer.parseInt(temp[i-1]),i);
 		}
 		

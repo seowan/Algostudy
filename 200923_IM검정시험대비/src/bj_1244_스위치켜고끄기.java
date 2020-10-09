@@ -2,56 +2,56 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class bj_1244_½ºÀ§Ä¡ÄÑ°í²ô±â {
+public class bj_1244_ìŠ¤ìœ„ì¹˜ì¼œê³ ë„ê¸° {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		StringBuilder sb = new StringBuilder();
 		
-		int swinum = Integer.parseInt(br.readLine()); //ÀüÃ¼½ºÀ§Ä¡ °¹¼ö
-		int num[] = new int[swinum+1]; //½ºÀ§Ä¡ »óÅÂ¸¦ ÀúÀåÇÏ±âÀ§ÇÑ ¹è¿­
+		int swinum = Integer.parseInt(br.readLine()); //ì „ì²´ìŠ¤ìœ„ì¹˜ ê°¯ìˆ˜
+		int num[] = new int[swinum+1]; //ìŠ¤ìœ„ì¹˜ ìƒíƒœë¥¼ ì €ì¥í•˜ê¸°ìœ„í•œ ë°°ì—´
 		
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= swinum; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
-		} //½ºÀ§Ä¡ »óÅÂ ÀÔ·Â Á¾·á
+		} //ìŠ¤ìœ„ì¹˜ ìƒíƒœ ì…ë ¥ ì¢…ë£Œ
 		
-		int person = Integer.parseInt(br.readLine()); //ÇĞ»ı¼ö ÀÔ·Â ¹ŞÀ½
-		for (int i = 0; i < person; i++) { //ÇĞ»ıº°·Î ½ºÀ§Ä¡ ÄÑ°í²ô±â ½ÇÇà
+		int person = Integer.parseInt(br.readLine()); //í•™ìƒìˆ˜ ì…ë ¥ ë°›ìŒ
+		for (int i = 0; i < person; i++) { //í•™ìƒë³„ë¡œ ìŠ¤ìœ„ì¹˜ ì¼œê³ ë„ê¸° ì‹¤í–‰
 			st = new StringTokenizer(br.readLine());
-			int kind = Integer.parseInt(st.nextToken()); //³²,¿© ±¸ºĞ
-			int given = Integer.parseInt(st.nextToken()); //½ºÀ§Ä¡¹øÈ£
+			int kind = Integer.parseInt(st.nextToken()); //ë‚¨,ì—¬ êµ¬ë¶„
+			int given = Integer.parseInt(st.nextToken()); //ìŠ¤ìœ„ì¹˜ë²ˆí˜¸
 			int index; 			
-			switch (kind) { //³²ÇĞ»ı,¿©ÇĞ»ı¿¡ µû¶ó ´Ù¸£°Ô ½ºÀ§Ä¡Á¶ÀÛ
-			case 1: //³²ÇĞ»ıÀÏ °æ¿ì
+			switch (kind) { //ë‚¨í•™ìƒ,ì—¬í•™ìƒì— ë”°ë¼ ë‹¤ë¥´ê²Œ ìŠ¤ìœ„ì¹˜ì¡°ì‘
+			case 1: //ë‚¨í•™ìƒì¼ ê²½ìš°
 				index=1;
 				while (true) {
-					if (index*given<=swinum) { //ºÎ¿©¹ŞÀº ¹øÈ£ÀÇ¹è¼ö°¡ ½ºÀ§Ä¡¾È¿¡ÀÖÀ¸¸é
+					if (index*given<=swinum) { //ë¶€ì—¬ë°›ì€ ë²ˆí˜¸ì˜ë°°ìˆ˜ê°€ ìŠ¤ìœ„ì¹˜ì•ˆì—ìˆìœ¼ë©´
 						if (num[index*given]==0) { 
 							num[index*given]=1;
 						}else num[index*given]=0;
-					index++; //½ºÀ§Ä¡¸¦ Á¶ÀÛÇÏ°í ÀÎµ¦½º 1Áõ°¡
-					}else break; //½ºÀ§Ä¡¹üÀ§ ¹ÛÀÌ¸é Á¾·á
+					index++; //ìŠ¤ìœ„ì¹˜ë¥¼ ì¡°ì‘í•˜ê³  ì¸ë±ìŠ¤ 1ì¦ê°€
+					}else break; //ìŠ¤ìœ„ì¹˜ë²”ìœ„ ë°–ì´ë©´ ì¢…ë£Œ
 				}
-				break; //ÇØ´ç ÇĞ»ıÀÇ ½ºÀ§Ä¡ Á¶ÀÛ Á¾·á
+				break; //í•´ë‹¹ í•™ìƒì˜ ìŠ¤ìœ„ì¹˜ ì¡°ì‘ ì¢…ë£Œ
 
-			case 2: //¿©ÇĞ»ıÀÏ °æ¿ì
+			case 2: //ì—¬í•™ìƒì¼ ê²½ìš°
 				index=1;
-				if (num[given]==0) { //ÀÏ´Ü ºÎ¿©¹ŞÀº ¹øÈ£ÀÇ ½ºÀ§Ä¡¸¦ Á¶ÀÛ
+				if (num[given]==0) { //ì¼ë‹¨ ë¶€ì—¬ë°›ì€ ë²ˆí˜¸ì˜ ìŠ¤ìœ„ì¹˜ë¥¼ ì¡°ì‘
 					num[given]=1;
 				}else num[given]=0;
 				
 				while (true) {
-					if ((given-index)>0 && (given+index)<=swinum && //ÁÖº¯ ½ºÀ§Ä¡°¡ ¹üÀ§¾È¿¡ÀÖ°í
-							num[given-index]==num[given+index]) { //½ºÀ§Ä¡»óÅÂ°¡ °°´Ù¸é
+					if ((given-index)>0 && (given+index)<=swinum && //ì£¼ë³€ ìŠ¤ìœ„ì¹˜ê°€ ë²”ìœ„ì•ˆì—ìˆê³ 
+							num[given-index]==num[given+index]) { //ìŠ¤ìœ„ì¹˜ìƒíƒœê°€ ê°™ë‹¤ë©´
 						if (num[given-index]==0) {
 							num[given-index]=num[given+index]=1;
 						}else num[given-index]=num[given+index]=0;
-					index++; //½ºÀ§Ä¡Á¶ÀÛÈÄ ÀÎµ¦½º Áõ°¡
-					}else break; //±×·¸Áö¾ÊÀ¸¸é Á¾·á
+					index++; //ìŠ¤ìœ„ì¹˜ì¡°ì‘í›„ ì¸ë±ìŠ¤ ì¦ê°€
+					}else break; //ê·¸ë ‡ì§€ì•Šìœ¼ë©´ ì¢…ë£Œ
 				}
-				break; //ÇØ´ç ÇĞ»ıÀÇ ½ºÀ§Ä¡ Á¶ÀÛ Á¾·á
+				break; //í•´ë‹¹ í•™ìƒì˜ ìŠ¤ìœ„ì¹˜ ì¡°ì‘ ì¢…ë£Œ
 			}
 		}
 		

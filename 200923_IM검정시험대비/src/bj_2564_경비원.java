@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class bj_2564_°æºñ¿ø {
+public class bj_2564_ê²½ë¹„ì› {
 	static class sp{
 		public int x,y,dir;
 
@@ -20,16 +20,16 @@ public class bj_2564_°æºñ¿ø {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int C = Integer.parseInt(st.nextToken()); //°¡·Î±æÀÌ
-		int R = Integer.parseInt(st.nextToken()); //¼¼·Î±æÀÌ
-		int store = Integer.parseInt(br.readLine()); //»óÁ¡°¹¼ö
+		int C = Integer.parseInt(st.nextToken()); //ê°€ë¡œê¸¸ì´
+		int R = Integer.parseInt(st.nextToken()); //ì„¸ë¡œê¸¸ì´
+		int store = Integer.parseInt(br.readLine()); //ìƒì ê°¯ìˆ˜
 		ArrayList<sp> arr = new ArrayList<sp>();
 		
 		for (int i = 0; i <= store; i++) {
 			st = new StringTokenizer(br.readLine());
-			int dir = Integer.parseInt(st.nextToken()); //¹æÇâ
-			int point = Integer.parseInt(st.nextToken()); //°Å¸®
-			switch (dir) {//¹æÇâ¿¡µû¶ó ÁÂÇ¥¸¦ °è»êÇÏ¿© ¹è¿­¿¡ ÀúÀå
+			int dir = Integer.parseInt(st.nextToken()); //ë°©í–¥
+			int point = Integer.parseInt(st.nextToken()); //ê±°ë¦¬
+			switch (dir) {//ë°©í–¥ì—ë”°ë¼ ì¢Œí‘œë¥¼ ê³„ì‚°í•˜ì—¬ ë°°ì—´ì— ì €ì¥
 			case 1:
 				arr.add(new sp(0, point,dir));
 				break;
@@ -43,15 +43,15 @@ public class bj_2564_°æºñ¿ø {
 				arr.add(new sp(point, C,dir));
 				break;
 			}
-		}//»óÁ¡ & µ¿±ÙÀ§Ä¡ ÀÔ·Â ³¡
+		}//ìƒì  & ë™ê·¼ìœ„ì¹˜ ì…ë ¥ ë
 		
-		int answer=0; //ÃÑ °Å¸®
+		int answer=0; //ì´ ê±°ë¦¬
 		int xx = arr.get(store).x;
 		int yy = arr.get(store).y;
 		int dir = arr.get(store).dir;
-		int dista,distb; //ºñ±³ÇÒ µÎ °Å¸® ÀúÀå
+		int dista,distb; //ë¹„êµí•  ë‘ ê±°ë¦¬ ì €ì¥
 		for (int i = 0; i < store; i++) {
-			if ((dir==1&&arr.get(i).dir==2) ||  //³²ÂÊ°ú ºÏÂÊ
+			if ((dir==1&&arr.get(i).dir==2) ||  //ë‚¨ìª½ê³¼ ë¶ìª½
 					(dir==2&&arr.get(i).dir==1)) {
 				dista = arr.get(i).y+yy+R;
 				distb = C-arr.get(i).y+C-yy+R;
@@ -62,7 +62,7 @@ public class bj_2564_°æºñ¿ø {
 				dista = arr.get(i).x+xx+C;
 				distb = R-arr.get(i).x+R-xx+C;
 				answer+=Math.min(dista, distb);
-			}else { //¼­·Î ¸¶ÁÖº¸´Â ¹æÇâÀÌ ¾Æ´Ò°æ¿ì
+			}else { //ì„œë¡œ ë§ˆì£¼ë³´ëŠ” ë°©í–¥ì´ ì•„ë‹ê²½ìš°
 				answer+=Math.abs(xx-arr.get(i).x) + Math.abs(yy-arr.get(i).y);
 			}
 		}

@@ -2,25 +2,25 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class bj_2309_ÀÏ°ö³­ÀïÀÌ {
+public class bj_2309_ì¼ê³±ë‚œìŸì´ {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int person[] = new int[9]; //³­ÀïÀÌ Å° ÀÔ·Â¹ŞÀ» ¹è¿­
-		int sum=0; //³­ÀïÀÌ Å° ÇÕÀ» ÀúÀåÇÒ ¹è¿­
+		int person[] = new int[9]; //ë‚œìŸì´ í‚¤ ì…ë ¥ë°›ì„ ë°°ì—´
+		int sum=0; //ë‚œìŸì´ í‚¤ í•©ì„ ì €ì¥í•  ë°°ì—´
 		
 		for (int i = 0; i < 9; i++) {
 			person[i] = Integer.parseInt(br.readLine());
 			sum+=person[i];
-		} //³­ÀïÀÌ Å°ÀÔ·Â Á¾·á
+		} //ë‚œìŸì´ í‚¤ì…ë ¥ ì¢…ë£Œ
 		
 		Arrays.sort(person);
 		
 		for (int i = 8; i >= 0 ; i--) {
-			for (int j = i-1; j >= 0; j--) { //Å°°¡ Å«¼ø¼­·Î ³­ÀïÀÌ µÎ¸íÀ» »Ì¾Æ¼­
-				if (sum-person[i]-person[j]==100) { //ÇÕÀÌ 100ÀÌµÇ¸é
-					for (int z = 0; z < 9; z++) { //³­ÀïÀÌ Å° Ãâ·Â
+			for (int j = i-1; j >= 0; j--) { //í‚¤ê°€ í°ìˆœì„œë¡œ ë‚œìŸì´ ë‘ëª…ì„ ë½‘ì•„ì„œ
+				if (sum-person[i]-person[j]==100) { //í•©ì´ 100ì´ë˜ë©´
+					for (int z = 0; z < 9; z++) { //ë‚œìŸì´ í‚¤ ì¶œë ¥
 						if (z!=i && z!=j) {
 							System.out.println(person[z]);
 						}
