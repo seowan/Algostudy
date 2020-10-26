@@ -1,7 +1,6 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class bj_4485_녹색옷입은애가젤다지 {
@@ -21,11 +20,13 @@ public class bj_4485_녹색옷입은애가젤다지 {
 	static int min = Integer.MAX_VALUE;
 
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st ;
+	//	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		//StringTokenizer st ;
+		Scanner sc = new Scanner(System.in);
 		
 		while (true) {
-			N = Integer.parseInt(br.readLine());
+			N = sc.nextInt();
+			//N = Integer.parseInt(br.readLine());
 			
 			if (N==0) {
 				break;
@@ -36,9 +37,10 @@ public class bj_4485_녹색옷입은애가젤다지 {
 			visited = new boolean[N][N];
 			
 			for (int i = 0; i < N; i++) {
-				st = new StringTokenizer(br.readLine());
+				//st = new StringTokenizer(br.readLine());
 				for (int j = 0; j < N; j++) {
-					map[i][j] = Integer.parseInt(st.nextToken());
+					//map[i][j] = Integer.parseInt(st.nextToken());
+					map[i][j] = sc.nextInt();
 					result[i][j] = min;
 				}
 			}//입력 끝
