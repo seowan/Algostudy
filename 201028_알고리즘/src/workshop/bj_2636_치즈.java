@@ -8,8 +8,6 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class bj_2636_치즈 {
-	// 가운데 구멍을 먼저 찾아주어 값을 바꿔주고
-	// 제일 겉면의 치즈를 찾아주어 1시간뒤에 소멸되게한다
 
 	static class point {
 		int x, y;
