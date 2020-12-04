@@ -104,7 +104,7 @@ public class swea_2383_점심식사시간_태희쌤 {
 			timeA = processDown(aList, sList[0][2]);
 		}
 		if (bList.size() > 0) {
-			timeB = processDown(aList, sList[1][2]);
+			timeB = processDown(bList, sList[1][2]);
 		}
 		return timeA > timeB ? timeA : timeB;
 	}
