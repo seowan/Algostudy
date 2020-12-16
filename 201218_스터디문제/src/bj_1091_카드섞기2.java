@@ -29,7 +29,7 @@ public class bj_1091_카드섞기2 {
 			temp[i] = i%3;
 		}//초기값설정
 		
-		while (count<200000) {
+		while (true) {
 			boolean check = true;
 			//같은지 다른지 비교
 			for (int i = 0; i < N; i++) {
